@@ -6,3 +6,9 @@
 /bin/Debug
 /obj/Debug
 /CustomerManagementSystem/obj/Debug
+/CustomerManagementSystemTest/bin/Debug
+/CustomerManagementSystemTest/obj/Debug
+/packages
+/CustomerManagementSystem/bin/Debug/CustomerManagementSystem.exe
+/CustomerManagementSystem/bin/Debug/CustomerManagementSystem.exe.config
+/CustomerManagementSystem/bin/Debug/CustomerManagementSystem.pdb

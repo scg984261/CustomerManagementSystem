@@ -6,7 +6,12 @@ namespace CustomerManagementSystem
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, from CMS!");
+            Console.WriteLine(GetMessage());
         }
+
+        public static string GetMessage()
+        {
+            return "Hello, from CMS!";
+        } 
     }
 }
