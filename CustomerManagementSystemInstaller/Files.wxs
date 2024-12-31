@@ -2,14 +2,22 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
 	<Fragment>
 		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="AppConfigComponent" Guid="{796467C3-26F9-40BD-A4D2-CB4A31827338}">
+				<File Id="AppConfigFile" KeyPath="yes" Source="$(var.BasePath)\App.config" />
+			</Component>
 			<Component Id="IconComponent" Guid="{3D9714F8-6A9F-4F13-8156-5A2979CFA12F}">
 				<File Id="IconFile" KeyPath="yes" Source="$(var.BasePath)\app.ico" />
+			</Component>
+			<Component Id="CDBAssemblyComponent" Guid="{9B43852A-05B4-4B56-8293-6FC19260B006}">
+				<File Id="CDBAssemblyFile" KeyPath="yes" Source="$(var.BasePath)\CDB.dll" />
 			</Component>
 		</DirectoryRef>
 	</Fragment>
 	<Fragment>
 		<ComponentGroup Id="PublishedComponents">
-			<ComponentRef Id="IconComponent"/>
+			<ComponentRef Id="IconComponent" />
+			<ComponentRef Id="AppConfigComponent" />
+			<ComponentRef Id="CDBAssemblyComponent" />
 		</ComponentGroup>
 	</Fragment>
 </Wix>
