@@ -17,3 +17,15 @@
 /CustomerManagementSystem/bin/Debug
 /DataModel/bin/Debug
 /DataModel/obj/Debug
+/.vs
+/CDB/bin/x64/Debug
+/CDB/obj
+/CustomerManagementSystem/bin/x64/Debug
+/CustomerManagementSystem/obj
+/CustomerManagementSystemInstaller/bin/Debug
+/CustomerManagementSystemInstaller/obj/Debug
+/CustomerManagementSystemTest/bin/x64/Debug
+/CustomerManagementSystemTest/obj/x64
+/DataModel/bin/x64/Debug
+/DataModel/obj/x64/Debug
+/DataModel/obj/x64/Release

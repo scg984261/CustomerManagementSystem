@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+	<String Id="ProductName">CustomerManagementSystem</String>
+	<String Id="Language">1033</String>
+	<String Id="Manufacturer">Scott Gillen</String>
+	<String Id="Description">.NET Framework Console Application for managing customers.</String>
+	<String Id="Keywords">.NET, Framework, Customers</String>
+	<String Id="Comments">Application can be run from the command line.</String>
+	<String Id="ProductNameFolder">CMS</String>
+	<String Id="ProductShortcutFolderName">CMS</String>
+</WixLocalization>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<!-- Product code - this should change with every Release. -->
+	<?define ProductCode="{87B6B32C-18E1-47E1-8C8B-F50D297CEBEC}"?>
+
+	<!-- Upgrade code - this should stay the same. -->
+	<?define UpgradeCode = "{CE01DF6C-6018-4895-A1C4-85259ECAB931}"?>
+	
+	<Product Id="$(var.ProductCode)"
+			 Name="!(loc.ProductName)"
+			 Language="!(loc.Language)"
+			 Version="$(var.BuildVersion)"
+			 Manufacturer="!(loc.Manufacturer)"
+			 UpgradeCode="$(var.UpgradeCode)" >
+		
+		<Package InstallerVersion="200"
+				 Compressed="yes"
+				 InstallScope="perMachine"
+				 Manufacturer="!(loc.Manufacturer)"
+				 Description="!(loc.Description)"
+				 Keywords="!(loc.Keywords)"
+				 Comments="!(loc.Comments)"
+				 Languages="!(loc.Language)" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of CustomerManagementSystem is already installed." />
+
+		<!-- Include/embed the cab file in the .msi file. -->
+		<MediaTemplate EmbedCab="yes"/>
+
+		<Icon Id="icon.ico" SourceFile="$(var.CustomerManagementSystem.ProjectDir)\app.ico" />
+
+		<!-- Set the Drive on which to install the application. -->
+		<Property Id="INSTALLDRIVE" Value="C:\"/>
+
+		<!-- Use the icon.ico image for the app. -->
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+		<!-- Support link -->
+		<Property Id="ARPURLINFOABOUT" Value="https://dotnet.microsoft.com/en-us/" />
+
+		<!-- Use a simple UI for the installer. -->
+		<UIRef Id="WixUI_Minimal" />
+
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\LicenseText.rtf" />
+
+		<Feature Id="ProductFeature" Title="CustomerManagementSystem" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			<ComponentGroupRef Id="PublishedComponents" />
+			<!-- <ComponentGroupRef Id="ConfigComponents"/> -->
+		</Feature>
+	</Product>
+
+	<Fragment>
+		
+	</Fragment>
+</Wix>

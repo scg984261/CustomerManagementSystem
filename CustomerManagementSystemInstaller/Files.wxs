@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<DirectoryRef Id="INSTALLFOLDER">
+			<Component Id="IconComponent" Guid="{3D9714F8-6A9F-4F13-8156-5A2979CFA12F}">
+				<File Id="IconFile" KeyPath="yes" Source="$(var.BasePath)\app.ico" />
+			</Component>
+		</DirectoryRef>
+	</Fragment>
+	<Fragment>
+		<ComponentGroup Id="PublishedComponents">
+			<ComponentRef Id="IconComponent"/>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
