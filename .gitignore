@@ -37,3 +37,7 @@
 /DataModel/bin/x64/Release
 /UserInterface/obj/Debug
 /UserInterface/bin/Debug
+/UserInterface/obj/x86/Debug
+/UserInterface/bin/x64/Debug
+/UserInterface/obj/Release
+/UserInterface/bin/Release

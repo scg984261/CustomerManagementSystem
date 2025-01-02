@@ -71,7 +71,7 @@
     -->
   <Target Name="BeforeBuild">
     <!-- Get the Assembly Version number of the CustomerManagementSystem.exe binary file. -->
-    <GetAssemblyIdentity AssemblyFiles="..\CustomerManagementSystem\bin\$(Platform)\$(Configuration)\CustomerManagementSystem.exe">
+    <GetAssemblyIdentity AssemblyFiles="..\CustomerManagementSystem\bin\$(Platform)\$(Configuration)\CustomerManagementSystem.dll">
       <Output TaskParameter="Assemblies" ItemName="AssemblyVersion" />
     </GetAssemblyIdentity>
     <!-- Expose the binary file version number as a property. -->

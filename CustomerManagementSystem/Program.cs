@@ -1,18 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-// using Presentation;
 using CDB;
-using UserInterface;
+// using Presentation;
+// using UserInterface;
 
 namespace CustomerManagementSystem
 {
     public class Program
     {
-        [STAThread]
+        private static CDBWrapper databaseWrapper = new CDBWrapper(); 
+
         public static void Main(string[] args)
         {
+            /*
             MainWindow window = new MainWindow();
             window.Show();
+            */
 
             CDBWrapper cdb = new CDBWrapper();
             Console.WriteLine(GetMessage());
@@ -28,7 +31,14 @@ namespace CustomerManagementSystem
         public static string GetMessage()
         {
             return "Hello, from CMS!";
-        } 
+        }
+
+        public static List<DataModel.Customer> GetCustomers()
+        {
+            List<SelectAllCustomers_Result> storedProcResultSet = databaseWrapper.SelectAllCustomers();
+            List<DataModel.Customer> customers = ConvertCustomers(storedProcResultSet);
+            return customers;
+        }
 
         public static List<DataModel.Customer> ConvertCustomers(List<SelectAllCustomers_Result> resultSet)
         {

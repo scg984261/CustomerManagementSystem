@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CustomerManagementSystem;
 
 namespace UserInterface
 {
@@ -20,6 +21,8 @@ namespace UserInterface
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<DataModel.Customer> customerList = Program.GetCustomers();
+
         public MainWindow()
         {
             InitializeComponent();
