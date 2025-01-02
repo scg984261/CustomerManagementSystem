@@ -10,16 +10,23 @@
 namespace CDB
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class SelectAllCustomers_Result
+    public partial class Service
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Service()
+        {
+            this.Subscriptions = new HashSet<Subscription>();
+        }
+    
         public int Id { get; set; }
-        public string CompanyName { get; set; }
-        public string BusinessContact { get; set; }
-        public string EmailAddress { get; set; }
-        public string ContactNumber { get; set; }
-        public bool IsActive { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime LastUpdateDateTime { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Subscription> Subscriptions { get; set; }
     }
 }

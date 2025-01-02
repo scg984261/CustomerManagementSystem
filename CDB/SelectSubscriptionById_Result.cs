@@ -11,15 +11,14 @@ namespace CDB
 {
     using System;
     
-    public partial class SelectAllCustomers_Result
+    public partial class SelectSubscriptionById_Result
     {
-        public int Id { get; set; }
+        public int SubscriptionId { get; set; }
+        public int CustomerId { get; set; }
+        public int ServiceId { get; set; }
         public string CompanyName { get; set; }
         public string BusinessContact { get; set; }
-        public string EmailAddress { get; set; }
-        public string ContactNumber { get; set; }
-        public bool IsActive { get; set; }
-        public System.DateTime CreatedDateTime { get; set; }
-        public System.DateTime LastUpdateDateTime { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
     }
 }

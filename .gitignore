@@ -35,3 +35,5 @@
 /CustomerManagementSystemInstaller/obj/Release
 /CustomerManagementSystemTest/bin/x64/Release
 /DataModel/bin/x64/Release
+/UserInterface/obj/Debug
+/UserInterface/bin/Debug

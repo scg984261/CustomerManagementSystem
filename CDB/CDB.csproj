@@ -52,63 +52,82 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CDBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDBModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="CDBWrapper.cs" />
-    <Compile Include="CDBContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CDBContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CDBContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CDBContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CDBContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CDBContext.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>CDBContext.tt</DependentUpon>
+      <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="InsertCustomer_Result.cs">
-      <DependentUpon>CDBContext.tt</DependentUpon>
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsertService_Result.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InsertSubscription_Result.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectAllCustomers_Result.cs">
-      <DependentUpon>CDBContext.tt</DependentUpon>
+      <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SelectCustomerById_Result.cs">
-      <DependentUpon>CDBContext.tt</DependentUpon>
+      <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="CDBContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CDBContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="SelectServiceById_Result.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSubscriptionById_Result.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateServicePrice_Result.cs">
+      <DependentUpon>CDBModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="CDBContext.edmx.diagram">
-      <DependentUpon>CDBContext.edmx</DependentUpon>
+    <EntityDeploy Include="CDBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CDBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CDBModel.edmx.diagram">
+      <DependentUpon>CDBModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CDBContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CDBContext.Context.cs</LastGenOutput>
-      <DependentUpon>CDBContext.edmx</DependentUpon>
-    </Content>
-    <Content Include="CDBContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CDBContext.edmx</DependentUpon>
-      <LastGenOutput>CDBContext.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="CDBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDBModel.edmx</DependentUpon>
+      <LastGenOutput>CDBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CDBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CDBModel.edmx</DependentUpon>
+      <LastGenOutput>CDBModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

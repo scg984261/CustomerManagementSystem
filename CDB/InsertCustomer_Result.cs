@@ -14,8 +14,11 @@ namespace CDB
     public partial class InsertCustomer_Result
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string CompanyName { get; set; }
+        public string BusinessContact { get; set; }
+        public string EmailAddress { get; set; }
+        public string ContactNumber { get; set; }
+        public bool IsActive { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime LastUpdateDateTime { get; set; }
     }

@@ -14,10 +14,22 @@ namespace CDB
     
     public partial class Customer
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customer()
+        {
+            this.Subscriptions = new HashSet<Subscription>();
+        }
+    
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string CompanyName { get; set; }
+        public string BusinessContact { get; set; }
+        public string EmailAddress { get; set; }
+        public string ContactNumber { get; set; }
+        public bool IsActive { get; set; }
         public System.DateTime CreatedDateTime { get; set; }
         public System.DateTime LastUpdateDateTime { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Subscription> Subscriptions { get; set; }
     }
 }

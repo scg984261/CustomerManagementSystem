@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+// using Presentation;
 using CDB;
+using UserInterface;
 
 namespace CustomerManagementSystem
 {
     public class Program
     {
+        [STAThread]
         public static void Main(string[] args)
         {
+            MainWindow window = new MainWindow();
+            window.Show();
+
             CDBWrapper cdb = new CDBWrapper();
             Console.WriteLine(GetMessage());
             List<SelectAllCustomers_Result> customers = cdb.SelectAllCustomers();
