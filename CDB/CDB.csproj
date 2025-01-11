@@ -68,9 +68,6 @@
       <DependentUpon>CDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="CDBWrapper.cs" />
-    <Compile Include="Customer.cs">
-      <DependentUpon>CDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="InsertCustomer_Result.cs">
       <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
@@ -91,12 +88,6 @@
       <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SelectSubscriptionById_Result.cs">
-      <DependentUpon>CDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Service.cs">
-      <DependentUpon>CDBModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Subscription.cs">
       <DependentUpon>CDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="UpdateServicePrice_Result.cs">

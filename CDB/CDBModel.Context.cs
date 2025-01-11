@@ -27,9 +27,6 @@ namespace CDB
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Service> Services { get; set; }
-        public virtual DbSet<Subscription> Subscriptions { get; set; }
     
         public virtual ObjectResult<InsertCustomer_Result> InsertCustomer(string companyName, string businessContact, string emailAddress, string contactNumber)
         {

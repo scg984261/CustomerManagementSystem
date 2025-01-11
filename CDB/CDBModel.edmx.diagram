@@ -5,11 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bb8f7e1731f84c308d37a00e3c9dd292" Name="Diagram1">
-        <EntityTypeShape EntityType="CDBModel.Customer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CDBModel.Service" Width="1.5" PointX="5.5" PointY="0.75" />
-        <EntityTypeShape EntityType="CDBModel.Subscription" Width="1.5" PointX="2.875" PointY="0.75" />
-        <AssociationConnector Association="CDBModel.SubscriptionCustomerIdForeignKey" />
-        <AssociationConnector Association="CDBModel.SubscriptionServiceIdForeignKey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
