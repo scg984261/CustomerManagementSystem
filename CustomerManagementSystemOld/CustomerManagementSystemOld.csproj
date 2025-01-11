@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F0DA5770-B5CE-4E47-973B-CF159F09BE04}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>CustomerManagementSystem</RootNamespace>
-    <AssemblyName>CustomerManagementSystem</AssemblyName>
+    <RootNamespace>CustomerManagementSystemOld</RootNamespace>
+    <AssemblyName>CustomerManagementSystemOld</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

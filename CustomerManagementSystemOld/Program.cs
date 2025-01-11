@@ -4,7 +4,7 @@ using CDB;
 // using Presentation;
 // using UserInterface;
 
-namespace CustomerManagementSystem
+namespace CustomerManagementSystemOld
 {
     public class Program
     {

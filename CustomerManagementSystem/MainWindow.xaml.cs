@@ -12,20 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CustomerManagementSystem;
+using CustomerManagementSystem.Data;
+using DataModel;
 
-namespace UserInterface
+namespace CustomerManagementSystem
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<DataModel.Customer> customerList = Program.GetCustomers();
+        public DataProvider DataProvider { get; set; }
+        public List<Customer> Customers { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
+            this.DataProvider = new DataProvider();
+            this.Customers = this.DataProvider.GetAllCustomers();
         }
     }
 }
