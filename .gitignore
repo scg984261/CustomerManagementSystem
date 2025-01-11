@@ -41,3 +41,9 @@
 /UserInterface/bin/x64/Debug
 /UserInterface/obj/Release
 /UserInterface/bin/Release
+/CustomerManagementSystem/bin/Release
+/CustomerManagementSystemOld/bin
+/CustomerManagementSystemOld/obj/x64
+/CustomerManagementSystemOld/obj/x86/Debug
+/CustomerManagementSystemOld/obj/Debug
+/CustomerManagementSystemOld/.vs

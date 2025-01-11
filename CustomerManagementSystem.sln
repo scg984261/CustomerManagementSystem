@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystem", "CustomerManagementSystem\CustomerManagementSystem.csproj", "{F0DA5770-B5CE-4E47-973B-CF159F09BE04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystemOld", "CustomerManagementSystemOld\CustomerManagementSystemOld.csproj", "{F0DA5770-B5CE-4E47-973B-CF159F09BE04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystemTest", "CustomerManagementSystemTest\CustomerManagementSystemTest.csproj", "{8DB293CF-4782-4C69-A877-C55E22C41337}"
 EndProject
@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\Data
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "CustomerManagementSystemInstaller", "CustomerManagementSystemInstaller\CustomerManagementSystemInstaller.wixproj", "{FCBBC045-CAFB-4337-93FE-CCB5D62CF11B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{65CA7698-2FC9-41E7-8670-514EC4AA925B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystem", "CustomerManagementSystem\CustomerManagementSystem.csproj", "{65CA7698-2FC9-41E7-8670-514EC4AA925B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

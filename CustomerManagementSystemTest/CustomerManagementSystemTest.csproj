@@ -57,9 +57,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomerManagementSystem\CustomerManagementSystem.csproj">
+    <ProjectReference Include="..\CustomerManagementSystem\CustomerManagementSystemOld.csproj">
       <Project>{f0da5770-b5ce-4e47-973b-cf159f09be04}</Project>
-      <Name>CustomerManagementSystem</Name>
+      <Name>CustomerManagementSystemOld</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
