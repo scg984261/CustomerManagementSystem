@@ -4,15 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerManagementSystem"
+        xmlns:userControls="clr-namespace:CustomerManagementSystem.View.UserControls"
         mc:Ignorable="d"
-        Title="CMS" Height="450" Width="800"
-        Background="Gray"
-        BorderBrush="Aqua">
+        Title="CMS" Height="450" Width="900">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="21*"/>
-            <ColumnDefinition Width="59*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <userControls:MenuBar />
+        <TextBlock Background="Purple" Grid.Row="2" />
     </Grid>
 </Window>

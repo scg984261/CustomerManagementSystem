@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystemOld", "CustomerManagementSystemOld\CustomerManagementSystemOld.csproj", "{F0DA5770-B5CE-4E47-973B-CF159F09BE04}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagementSystemTest", "CustomerManagementSystemTest\CustomerManagementSystemTest.csproj", "{8DB293CF-4782-4C69-A877-C55E22C41337}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDB", "CDB\CDB.csproj", "{6FBE1375-44B7-4F8E-B361-079E2A2897A3}"
@@ -21,10 +19,6 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F0DA5770-B5CE-4E47-973B-CF159F09BE04}.Debug|x64.ActiveCfg = Debug|x64
-		{F0DA5770-B5CE-4E47-973B-CF159F09BE04}.Debug|x64.Build.0 = Debug|x64
-		{F0DA5770-B5CE-4E47-973B-CF159F09BE04}.Release|x64.ActiveCfg = Release|x64
-		{F0DA5770-B5CE-4E47-973B-CF159F09BE04}.Release|x64.Build.0 = Release|x64
 		{8DB293CF-4782-4C69-A877-C55E22C41337}.Debug|x64.ActiveCfg = Debug|x64
 		{8DB293CF-4782-4C69-A877-C55E22C41337}.Debug|x64.Build.0 = Debug|x64
 		{8DB293CF-4782-4C69-A877-C55E22C41337}.Release|x64.ActiveCfg = Release|x64

@@ -13,5 +13,8 @@ namespace CustomerManagementSystem
     /// </summary>
     public partial class App : Application
     {
+        // Main entry point of application.
+        // If you want to get access to the startup method of the WPF application, need to override
+        // method in Application class.
     }
 }
