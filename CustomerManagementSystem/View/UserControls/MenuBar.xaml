@@ -13,10 +13,7 @@
         </Grid.RowDefinitions>
         <Border Grid.Row="0" BorderBrush="Black" Background="Transparent" BorderThickness="0,0,0,2">
             <Menu Background="LightBlue" Height="30">
-                <MenuItem Height="30" Width="50" FontSize="12">
-                    <MenuItem.Header>
-                        <TextBlock Text="File" HorizontalAlignment="Right" VerticalAlignment="Bottom"  />
-                    </MenuItem.Header>
+                <MenuItem Header="File" Height="30" FontSize="12">
                     <MenuItem Header="Open" Click="OpenMenuItem_Click"/>
                     <MenuItem Header="Exit" />
                 </MenuItem>
