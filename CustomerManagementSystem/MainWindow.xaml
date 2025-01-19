@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CustomerManagementSystem"
         xmlns:userControls="clr-namespace:CustomerManagementSystem.View.UserControls"
         mc:Ignorable="d"
-        Title="CMS" Height="450" Width="900">
+        Title="CMS" Height="900" Width="1500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -15,6 +15,7 @@
         </Grid.RowDefinitions>
 
         <userControls:MenuBar />
-        <TextBlock Background="Purple" Grid.Row="2" />
+        <userControls:DataGrid Grid.Row="1" />
+        <userControls:FooterBar Grid.Row="2" />
     </Grid>
 </Window>
