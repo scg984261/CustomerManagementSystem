@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Markup;
 using CDB;
 using DataModel;
 
@@ -21,6 +22,18 @@ namespace CustomerManagementSystem.Data
             }
 
             return customerList;
+        }
+
+        public void UpdateCustomer(Customer customer)
+        {
+            int customerId = customer.Id;
+            string companyName = customer.CompanyName;
+            string businessContact = customer.BusinessContact;
+            string emailAddress = customer.EmailAddress;
+            string contactNumber = customer.ContactNumber;
+            bool isActive = customer.IsActive;
+
+            databaseWrapper.UpdateCustomer(customerId, companyName, businessContact, emailAddress, contactNumber, isActive);
         }
     }
 }
