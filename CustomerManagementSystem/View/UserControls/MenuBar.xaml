@@ -25,6 +25,8 @@
                 </MenuItem>
             </Menu>
         </Border>
+        
+        <!-- ToDo: make this search bar a separate component/user control. -->
         <Grid Margin="0,30,0,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
@@ -32,9 +34,11 @@
                 <ColumnDefinition Width="62.846"/>
             </Grid.ColumnDefinitions>
 
-            <!-- -->
+            <!-- 
             <Button Grid.Column="1" Width="100" Margin="5,5,5,5" Grid.ColumnSpan="2" Content="Search" FontFamily="Consolas" />
             <TextBox Grid.Column="0" Width="150" Margin="5,5,5,5" FontFamily="Consolas" VerticalContentAlignment="Center" Padding="5"/>
+            -->
+            <Button Grid.Column="0" Width="100" Margin="5,5,5,5" Grid.ColumnSpan="2" Content="New Customer" FontFamily="Consolas" />
         </Grid>
     </Grid>
 </UserControl>
