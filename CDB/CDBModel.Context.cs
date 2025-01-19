@@ -119,5 +119,34 @@ namespace CDB
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UpdateServicePrice_Result>("UpdateServicePrice", serviceIdParameter, newPriceParameter);
         }
+    
+        public virtual int UpdateCustomer(Nullable<int> customerId, string companyName, string businessContact, string emailAddress, string contactNumber, Nullable<bool> isActive)
+        {
+            var customerIdParameter = customerId.HasValue ?
+                new ObjectParameter("CustomerId", customerId) :
+                new ObjectParameter("CustomerId", typeof(int));
+    
+            var companyNameParameter = companyName != null ?
+                new ObjectParameter("CompanyName", companyName) :
+                new ObjectParameter("CompanyName", typeof(string));
+    
+            var businessContactParameter = businessContact != null ?
+                new ObjectParameter("BusinessContact", businessContact) :
+                new ObjectParameter("BusinessContact", typeof(string));
+    
+            var emailAddressParameter = emailAddress != null ?
+                new ObjectParameter("EmailAddress", emailAddress) :
+                new ObjectParameter("EmailAddress", typeof(string));
+    
+            var contactNumberParameter = contactNumber != null ?
+                new ObjectParameter("ContactNumber", contactNumber) :
+                new ObjectParameter("ContactNumber", typeof(string));
+    
+            var isActiveParameter = isActive.HasValue ?
+                new ObjectParameter("IsActive", isActive) :
+                new ObjectParameter("IsActive", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UpdateCustomer", customerIdParameter, companyNameParameter, businessContactParameter, emailAddressParameter, contactNumberParameter, isActiveParameter);
+        }
     }
 }

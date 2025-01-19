@@ -29,6 +29,14 @@
         <Function Name="SelectSubscriptionById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SubscriptionId" Type="int" Mode="In" />
         </Function>
+        <Function Name="UpdateCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CustomerId" Type="int" Mode="In" />
+          <Parameter Name="CompanyName" Type="nvarchar" Mode="In" />
+          <Parameter Name="BusinessContact" Type="nvarchar" Mode="In" />
+          <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="ContactNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="IsActive" Type="bit" Mode="In" />
+        </Function>
         <Function Name="UpdateServicePrice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ServiceId" Type="int" Mode="In" />
           <Parameter Name="NewPrice" Type="money" Mode="In" />
@@ -66,6 +74,14 @@
           <FunctionImport Name="UpdateServicePrice" ReturnType="Collection(CDBModel.UpdateServicePrice_Result)">
             <Parameter Name="ServiceId" Mode="In" Type="Int32" />
             <Parameter Name="NewPrice" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateCustomer">
+            <Parameter Name="CustomerId" Mode="In" Type="Int32" />
+            <Parameter Name="CompanyName" Mode="In" Type="String" />
+            <Parameter Name="BusinessContact" Mode="In" Type="String" />
+            <Parameter Name="EmailAddress" Mode="In" Type="String" />
+            <Parameter Name="ContactNumber" Mode="In" Type="String" />
+            <Parameter Name="IsActive" Mode="In" Type="Boolean" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="InsertCustomer_Result">
@@ -244,6 +260,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UpdateCustomer" FunctionName="CDBModel.Store.UpdateCustomer" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

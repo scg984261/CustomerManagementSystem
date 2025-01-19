@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CDB
 {
@@ -19,6 +20,14 @@ namespace CDB
             {
                 List<SelectAllCustomers_Result> customerList = context.SelectAllCustomers().ToList();
                 return customerList;
+            }
+        }
+
+        public void UpdateCustomer(int customerId, string companyName, string businessContact, string emailAddress, string contactNumber, bool isActive)
+        {
+            using (CDBContext context = new CDBContext())
+            {
+                context.UpdateCustomer(customerId, companyName, businessContact, emailAddress, contactNumber, isActive);
             }
         }
     }
