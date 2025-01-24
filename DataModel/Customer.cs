@@ -14,6 +14,18 @@ namespace DataModel
         public DateTime CreatedDateTime { get; set; }
         public DateTime LastUpdateDateTime { get; set; }
 
+        public Customer()
+        {
+            this.Id = 0;
+            this.CompanyName = string.Empty;
+            this.BusinessContact = string.Empty;
+            this.EmailAddress = string.Empty;
+            this.ContactNumber = string.Empty;
+            this.IsActive = false;
+            this.CreatedDateTime = new DateTime();
+            this.LastUpdateDateTime = new DateTime();
+        }
+
         public Customer(SelectAllCustomers_Result customerResult)
         {
             this.Id = customerResult.Id;

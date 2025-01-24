@@ -59,5 +59,10 @@ namespace CustomerManagementSystem
             this.Running = !this.Running;
             */
         }
+
+        private void TabItem_ContextMenuClosing(object sender, ContextMenuEventArgs e)
+        {
+
+        }
     }
 }

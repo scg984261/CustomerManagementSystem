@@ -1,0 +1,29 @@
+﻿<Window x:Class="CustomerManagementSystem.View.NewCustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomerManagementSystem.View"
+        mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterOwner"
+        Title="NewCustomer" Height="600" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock Name="CompanyNameLabel" Height="40" Width="120" FontSize="16" Margin="10,15,0,0">Company Name: </TextBlock>
+            <TextBox  Name="CompanyNameTextBox" Height="40" Width="120" FontSize="16" Margin="10" VerticalAlignment="Center" VerticalContentAlignment="Center" Padding="5" />
+        </StackPanel>
+
+        <Button Grid.Column="0" Grid.Row="1" Name="NewCustomerSaveButton" Content="Save" Height="50" Width="120" Margin="10" Click="NewCustomerSaveButton_Click" />
+        <Button Grid.Column="1" Grid.Row="1" Name="NewCustomerCancelButton" Content="Cancel" Height="50" Width="120" Margin="10" Click="NewCustomerCancelButton_Click" />
+    </Grid>
+</Window>

@@ -5,17 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomerManagementSystem"
         xmlns:userControls="clr-namespace:CustomerManagementSystem.View.UserControls"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="CMS" Height="900" Width="1500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
         <userControls:MenuBar />
-        <userControls:DataGrid Grid.Row="1" />
-        <userControls:FooterBar Grid.Row="2" />
+        <TabControl Name="TabCollection" Grid.Row="1">
+            <TabItem  Header="Main Details">
+                <userControls:DataGrid Grid.Row="1" />
+            </TabItem>
+
+            <TabItem Header="Tab 2" Content="Hello, World">
+            </TabItem>
+
+        </TabControl>
+
+        <StackPanel Orientation="Horizontal" Width="auto" Height="auto" Background="DarkGray" Grid.Row="2" >
+            <Button Margin="10" Height="60" Width="150" Content="New Customer" />
+            <Button Margin="10" Height="60" Width="150" Content="Edit"/>
+        </StackPanel>
+
+        <userControls:FooterBar Grid.Row="3" />
     </Grid>
 </Window>

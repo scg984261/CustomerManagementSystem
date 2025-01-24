@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using CustomerManagementSystem.Data;
 using DataModel;
@@ -12,12 +13,13 @@ namespace CustomerManagementSystem.View.UserControls
     public partial class DataGrid : UserControl
     {
         public DataProvider DataProvider { get; set; } = new DataProvider();
-        public List<Customer> Customers { get; set; }
+        public ObservableCollection<Customer> Customers { get; set; }
 
         public DataGrid()
         {
             InitializeComponent();
-            this.Customers = this.DataProvider.GetAllCustomers();
+            List<Customer> customerList = this.DataProvider.GetAllCustomers();
+            this.Customers = new ObservableCollection<Customer>(customerList);
         }
 
         public void Window_Loaded(object sender, EventArgs e)
@@ -27,8 +29,10 @@ namespace CustomerManagementSystem.View.UserControls
 
         private void CustomerTable_RowEditEnding(object sender, DataGridRowEditEndingEventArgs rowEventArgs)
         {
-            Customer customerToUpdate = (Customer) this.CustomerTable.SelectedItem;
+            Customer customerToUpdate = (Customer) this.CustomerTable.SelectedValue;
             this.DataProvider.UpdateCustomer(customerToUpdate);
+            // var datag = (DataGrid) sender;
+            // var c = datag.;
         }
     }
 }
